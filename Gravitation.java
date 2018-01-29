@@ -14,14 +14,14 @@ public class Gravitation{
     public static final int NDIM = 2;
     public static final double RMIN = 1.;
     //fields
-    private double pos[][];
-    private double vel[][];
-    private double force[][];
-    private double mass[];
-    private double radius[];
-    private int N;
+    private double pos[][]; //positions 
+    private double vel[][]; //velocities 
+    private double force[][]; //force
+    private double mass[]; //planet mass
+    private double radius[]; //planet radius 
+    private int N; //number of planets
     private double max;
-    private double G; 
+    private double G; //gravitational constant
     Random generator = new Random();
     
     //default constructor
@@ -144,7 +144,7 @@ public class Gravitation{
     }
 
     
-    //intial condition
+    //intial conditions for velocities
     public void initVel()
     {
 	//index of the mass and dimension
@@ -178,7 +178,7 @@ public class Gravitation{
 	    }
     }
     
-    //intial condition
+    //intial conditions
     public void initVelSpiral()
     {
 	//index of the mass and dimension
@@ -258,7 +258,7 @@ public class Gravitation{
 
     }
 
-    
+    //some other useful methods 
     public double getMax()
     {
 	return max;
@@ -323,7 +323,7 @@ public class Gravitation{
 	mass[0] += .05*(double)(N*N*N*N);
     }
     
-    /* To update position and velocity. Veloicty Verlet alhorith is choosen 
+    /* To update position and velocity. Velocity Verlet algorithm is choosen 
        because it preserve the total energy */
     
     public void move()
