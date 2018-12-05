@@ -14,3 +14,6 @@ This simulation program allows user to observe how planets interact with each ot
 
 Note:
 This simulation program was part of my computer science class project back in 2012.  
+
+## Authors
+Paul Hanakata
